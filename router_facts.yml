@@ -1,7 +1,7 @@
 ---
 - name: Collect IOS Device Facts
   connection: network_cli
-  hosts: SDNLab
+  hosts: routers
   tasks:
     - name: collect facts
       ios_facts:
