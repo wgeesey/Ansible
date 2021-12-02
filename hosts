@@ -1,2 +1,5 @@
 [routers]
-vRTR1 ansible_host=192.168.47.2 ansible_user=ansible ansible_ssh_pass=Python123 ansible_connection=network_cli ansible_network_os=ios ansbile_become=no
+Router_1 
+Router_2 
+Router_3 
+

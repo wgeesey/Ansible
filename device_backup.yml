@@ -1,0 +1,17 @@
+---
+- name: Backup Cisco IOS Config
+  hosts: routers
+  gather_facts: no
+  
+  tasks:
+    - name: Backup Configuration
+      ios_config:
+        backup: yes
+      register: config_output
+
+    - name: Store Backup Config
+      copy:
+        src: "{{config_output.backup_path}}"
+        dest: "./backup/{{inventory_hostname}}.config"
+
+...
